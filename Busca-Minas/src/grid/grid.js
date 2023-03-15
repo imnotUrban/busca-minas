@@ -3,7 +3,7 @@ const createGrid = (size = 4)=>{
         for(let columns = 0; columns < size; columns++){
             stringTemp = `${rows}${columns}`;
             $("#container-grid").append(`<div class='grid' id=${stringTemp}></div>`);
-            console.log('id: ',stringTemp)
+            // console.log('id: ',stringTemp)
         };
         
     };

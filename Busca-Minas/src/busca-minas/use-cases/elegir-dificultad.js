@@ -1,3 +1,5 @@
+import { clearGrid,createGrid,refreshGrid } from "./index";
+
 export const dificultad = (nivelDificultad = facil) => {
 
     // switch ($(this).attr('dificultad_1')) {
