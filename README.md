@@ -1,2 +1,2 @@
 # busca-minas
-buscamos minas furras
+Buscar minas en un entorno de java script + jquery
