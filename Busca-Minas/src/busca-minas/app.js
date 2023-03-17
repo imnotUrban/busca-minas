@@ -1,8 +1,10 @@
 import html from './app.html?raw';
-import { createGrid,dificultad, clearGrid,refreshGrid,gameManage } from './use-cases/index';
+import { createGrid,dificultad, clearGrid,refreshGrid,gameManage, createMinas } from './use-cases/index';
 
 //TODO: Crear clase "minas"
 
+let cuadricula;
+let sizeC;
 /**
  * 
  * @param {String} elementId elemento que renderiza la app 
@@ -21,12 +23,13 @@ export const App = (elementId) =>{
         */
         $(".dif").click(function(){
             //Recibe la dificultad para crear un nuevo grid
-            dificultad($(this).attr('dificultad_1'));
+            sizeC = dificultad($(this).attr('dificultad_1'));
+            cuadricula = createMinas(sizeC);
+            gameManage(cuadricula);
 
-            gameManage();
         });
 
-        gameManage();
+        gameManage(cuadricula);
     
         $(".newGrid").click(function() {
             clearGrid();
@@ -39,7 +42,7 @@ export const App = (elementId) =>{
 
             
             $("#dificultades").toggle('slow');
-            
+
 
         });
 
@@ -54,6 +57,8 @@ export const App = (elementId) =>{
         app.innerHTML = html;
         document.querySelector(elementId).append(app);
         createGrid(size);
+        cuadricula = createMinas(size);
+
     })();
 
 }

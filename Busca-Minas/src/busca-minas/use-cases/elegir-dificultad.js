@@ -8,19 +8,19 @@ export const dificultad = (nivelDificultad = facil) => {
             refreshGrid(5);
             $("#dificultades").toggle('slow');
             
-            break;
+            return 5;
         case 'medio':
             clearGrid();
             createGrid(7);
             $("#dificultades").toggle('slow');
 
-            break;
+            return 7;
         case 'dificil':
             clearGrid();
             createGrid(10);
             $("#dificultades").toggle('slow');
 
-            break;
+            return 10;
                     
     }
 }

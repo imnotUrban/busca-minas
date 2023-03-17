@@ -30,9 +30,18 @@
 .show-hide{
 
   display: none;
-
 }
 
 .mina{
   background-color: red;
+}
+
+.libre{
+	background-color: blue;
+	color:aliceblue;
+}
+
+.nMinas{
+	color: aliceblue;
+	text-align: center;
 }
